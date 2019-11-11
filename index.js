@@ -62,7 +62,7 @@ function makePersonObject(id, name, email) {
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(makePersonObject) {
-// console.log(makePersonObject.name);
+console.log(makePersonObject.name);
 const personName = makePersonObject.name;
 
   return "Hello, my name is " + personName;
@@ -81,8 +81,17 @@ const personName = makePersonObject.name;
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
+function makeSmartPerson(name) {
+  const smartyPants = {
+    name: name,
+    sum: function(num1, num2) {
+      return num1 + num2;
+    },
+    speak: function(){
+      return "Hello, my name is " + name;
+    }
+  };
+  return smartyPants;
 }
 
 
