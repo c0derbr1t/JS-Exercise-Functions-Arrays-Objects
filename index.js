@@ -62,7 +62,7 @@ function makePersonObject(id, name, email) {
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(makePersonObject) {
-console.log(makePersonObject.name);
+// console.log(makePersonObject.name);
 const personName = makePersonObject.name;
 
   return "Hello, my name is " + personName;
@@ -152,9 +152,14 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex(inventory, index) {
-  /* code here */
+function getCarInfoByIndex(arr, index) {
+  const getCar = arr[index];
+  const make = getCar["car_make"];
+  const model = getCar["car_model"];
+
+  return "This is a " + make + " " + model;
 }
+
 
 /**
  * ### Challenge `getLastCarInfo`
